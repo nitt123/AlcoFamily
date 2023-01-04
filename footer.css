@@ -1,0 +1,55 @@
+footer a{
+   color: #000000;
+   font-size: 14px;
+   text-decoration: none;
+}
+footer ul{
+    text-align: center;
+    text-align: right;
+}
+.logo{
+   margin-top: 50px;
+}
+.icon{
+    width: 32px;
+    height: 32px;
+}
+.txtico{
+    display: flex;
+}
+.txt{
+    margin-top: 3px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.footerunder{
+    width: 100%;
+    background-color: #7D7878;
+    min-height: 0 0 auto;
+}
+.textunderfooter{
+  margin-top: 13px;
+}
+.textlogo{
+    font-size: 16px;
+    font: bold;
+}
+footer .linki a:hover {
+     color: #000000 ;
+}
+.linki{
+    margin-top: 33px;
+}
+.txtlogo{
+    text-align: center;
+    font-size: 32px;
+}
+.pivo{
+    text-align: center;
+    
+}
+.footer{
+    background-color: #C6C6C6;
+    min-height: auto;
+    width: 100%;
+}
