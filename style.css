@@ -1,31 +1,667 @@
-*,*:before, *:after{
-    box-sizing: border-box;
-}
-*{
-    margin: 0;
+.itemcard {
     padding: 0;
 }
-html, body {
-    height: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+@media screen and (min-width: 992px) {
+    .itemcard .itemcardbuttonfirst {
+        margin-right: 10px;
+    }
+
+    .itemcard .itemcardbuttonsecond {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .itemcard .itemcardbuttonthird {
+        margin-left: 10px;
+    }
+
+
+
+    .itemcard2 .itemcardbuttonfirst {
+        margin-right: 10px;
+    }
+
+    .itemcard2 .itemcardbuttonsecond {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .itemcard2 .itemcardbuttonthird {
+        margin-left: 10px;
+    }
+
+    .rozsulkaclass {
+        width: 70%;
+    }
+
+    .catimg {
+        float: right;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
 }
-.page{
-     min-height: 100%;
-     display: flex;
-     flex-direction: column;
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .itemcard:nth-child(2n+1) .itemcardbuttonfirst {
+        margin-right: 10px;
+    }
+
+    .itemcard:nth-child(2n) .itemcardbuttonfirst {
+        margin-left: 10px;
+    }
+
+    .itemcard:nth-child(2n+1) .itemcardbuttonsecond {
+        margin-right: 10px;
+    }
+
+    .itemcard:nth-child(2n) .itemcardbuttonsecond {
+        margin-left: 10px;
+    }
+
+    .itemcard:nth-child(2n+1) .itemcardbuttonthird {
+        margin-right: 10px;
+    }
+
+    .itemcard:nth-child(2n) .itemcardbuttonthird {
+        margin-left: 10px;
+    }
+
+
+
+    .itemcard2:nth-child(3) {
+        display: none;
+    }
+
+    .itemcard2 .itemcardbuttonfirst {
+        margin-right: 10px;
+    }
+
+    .itemcard2 .itemcardbuttonsecond {
+        margin-left: 10px;
+    }
+
+
+
+    .rozsulkaclass {
+        width: 100%;
+    }
+
+    .catimg {
+        float: right;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
 }
-.main{
-    flex: 1 1 auto;
+
+@media screen and (max-width: 767px) {
+    .itemcard .itemcardbuttonfirst {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .itemcard .itemcardbuttonsecond {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .itemcard .itemcardbuttonthird {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+
+    .itemcard2:nth-child(2) {
+        display: none;
+    }
+
+    .itemcard2:nth-child(3) {
+        display: none;
+    }
+
+    .itemcard2 .itemcardbuttonfirst {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+
+
+
+    .catimg {
+        float: left;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
 }
-.kol{
-    text-align: right;
+
+.itemcard .itemcardbutton {
+    margin-top: 30px;
 }
-.imgpivo{
+
+.itemcardbutton {
+    border: 1px solid black;
+}
+
+.itemimagecontainer {
+    display: flex;
+    border-bottom: solid 1px black;
+}
+
+.itemcardbutton .akcia {
+    left: 15px;
+    top: 10px;
+    background-color: #329F21;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+}
+
+.akcia span {
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.novunka {
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #5280F5;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.novunka span {
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.itemname {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 65%;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.itemcardbutton a {
+    text-decoration: none;
+}
+
+.itemcardbutton a:hover {
+    text-decoration: none;
+}
+
+.prices {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.realprice {
+    background-color: #FF9E2C;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+}
+
+.realprice:hover{
+    transform: scale(1.1);
+}
+
+.crossedprice {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 22px;
+    text-decoration: line-through;
+}
+
+.itemrow {
+    margin-top: 30px;
+}
+
+.responsesheader {
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.responses {
+    margin-top: 30px;
+}
+
+.userimage {
+    float: left;
+    height: 125px;
+    width: 170px;
+    margin-right: 10px;
+}
+
+.userresponse {
+    font-size: 20px;
+    text-align: justify;
+    float: left;
+}
+
+.rowunderline {
+    border: none;
+    height: 1px;
+    background-color: #000000;
+}
+
+.clear {
+    clear: both;
+}
+
+.responserow p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.responserow {
+    margin-top: 30px;
+}
+
+.responsename {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.demu {
+    margin-top: 30px;
+}
+
+.demuheader {
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.forma {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.map {
+    margin-top: 30px;
+}
+
+.formaheader {
+    text-align: center;
+    font-size: 24px;
+    width: 300px;
+}
+
+.formafields {
     width: 100%;
+}
+
+.formafields span {
+    font-size: 18px;
+}
+
+.formmessage {
+    height: 300px;
+}
+
+.forminput {
+    width: 100%;
+    border: #686868 solid 1px;
+}
+
+.formaitem {
+    margin-top: 20px;
+}
+
+.formabutton {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sendbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #999999;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    border: none;
+}
+
+.sendbuttontext {
+    border: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+}
+
+.mapimg {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rozsulka {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.firstsentence {
+    color: #5D8CBB;
+}
+
+.rozsulkaheaderandinput {
+    display: flex;
+    flex-direction: column;
+}
+
+.rozsulkaheader {
+    font-size: 40px;
+    font-weight: bold;
+    width: 350px;
+    float: left;
+}
+
+.rozsulkaclass {
+    background-color: #d4d4d4;
+    height: 60px;
+    padding: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    align-items: center;
+    color: #5D6464;
+    border-radius: 10px;
+    border: #000000 solid 1px;
+    float: left;
+}
+
+.rozsulkaform {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    outline: none;
+}
+
+.rozsulkainput {
+    font-size: 20px;
+    border: none;
+    background: none;
+    height: 100%;
+    outline: none;
+    width: 100%;
+}
+
+.rozsulkabutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #5D8CBB;
+    border-radius: 10px;
+    height: 100%;
+    width: 150px;
+    border: none;
+}
+
+.rozsulkabuttontext {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.chlibchuk {
+    margin-top: 30px;
+    padding-left: 30px;
+}
+
+.chlibchuk a {
+    color: #A0A0A2;
+    text-decoration: none;
+}
+
+.chlibchuk a:hover {
+    text-decoration: underline;
+}
+
+.tovarcard {
+    padding-right: 15px;
+    border: 1px solid black;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tovaropus {
+    padding-left: 15px;
+
+}
+
+.tovarheader {
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+}
+
+.tovarprice {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.twoprizes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tovarrealprice {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.tovarfakeprice {
+    font-size: 24px;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.tovarstatus {
+    font-size: 24px;
+    color: rgb(13, 172, 13);
+}
+
+.tovartext {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.tovarbuttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tovarbuttons a {
+    text-decoration: none;
+}
+
+.tovarbuttons a:hover {
+    text-decoration: none;
+}
+
+.tovarbuybutton {
+    text-decoration: none;
+    background-color: #FF9E2C;
+    color: white;
+    font-size: 30px;
+    border-radius: 15px;
+    width: 150px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.tovarkoshukbutton {
+
+    background-color: #51BB2C;
+    color: white;
+    font-size: 30px;
+    border-radius: 15px;
+    width: 150px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.tovartable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 33px;
+}
+
+.tabledata {
+    border: 1px solid black;
+    width: 50%;
+}
+
+.tablediv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.schozhitovaruheader {
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #000000;
+}
+
+
+.leftbutton {
+    margin: 0;
+    right: 0px;
+    bottom: 0px;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(156, 156, 156) 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+.itemcard2 {
+    padding: 0;
+}
+
+.carousel-control-prev-icon {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    content: url("img/leftarrow.png");
+}
+
+.carousel-control-next-icon {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    content: url("img/rightarrow.png");
+}
+
+.carousel-inner {
+    border-left: #000000 solid 1px;
+    border-right: #000000 solid 1px;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+.txtlogo {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+.imgpivo {
+    width: 100%;
+    margin-top: 30px;
 }
 
 .pivo {
     margin: 0 auto;
+    text-align: center;
 }
 
 .txtpivo {
@@ -38,8 +674,8 @@ html, body {
     right: 0;
     top: 0;
     bottom: 0;
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
     width: 300px;
@@ -47,5 +683,59 @@ html, body {
 }
 
 .infotext {
+    margin-top: 30px;
     margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.error {
+    background-color: #D9D9D9;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.kotsearch {
+    text-align: right;
+}
+
+.txtsot2 {
+    text-align: left;
+}
+
+.txtkot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn2{
+    border: #726767 2px solid;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.btntxt{
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.main a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.chlibchuknovuy {
+    margin-top: 30px;
 }
